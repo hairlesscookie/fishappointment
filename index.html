@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <style media="screen">
+      body{
+        background-color: #E7DFCB;
+      }
+      .header{
+        background-color:black;
+        text-align:center;
+        color:#e6e6e4;
+        font-family: 'Caveat', cursive;
+        font-size:50px;
+        border-radius: 5px;
+        text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;
+        box-shadow:2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                   12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+                   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                   41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                   100px 100px 80px rgba(0, 0, 0, 0.07);
+      }
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #2C2C2C;
+        margin-top: 10px;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        width: 33%;
+        background-color: #2C2C2C;
+        color: #6C6C6C;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+      .posts-heading{
+        font-family: 'Caveat', cursive;
+        text-align: center;
+        padding-top: 10px;
+      }
+      .actual-posts-1{
+        padding-left: 20px;
+        font-size: 25px;
+        width: 100%;
+        height: 200px;
+        border-style: solid;
+        border-width: 2.5px;
+        border-color: black;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+        transition: box-shadow 0.3s ease-in-out;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .actual-posts-1:hover{
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      }
+      a:link {
+        color: #2C2C2C;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #372750;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #3C3C3C;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>Fishappointment</title>
+  </head>
+  <body>
+    <div class="header">
+    Fishappointment
+    </div>
+    <div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'Posts')">Posts</button>
+  <button class="tablinks" onclick="openPage(event, 'Journals')">Journals</button>
+  <button class="tablinks" onclick="openPage(event, 'Contact')">Contact</button>
+  </div>
+
+
+    <div id="Posts" class="tabcontent">
+    <h1 class="posts-heading">Posts</h1>
+    <a href="posts/post-1.html"><div class="actual-posts-1">
+      <p class="post-title">The Hare And The Tortoise (Reimagined)</p>
+    </div>
+    </a>
+
+    <div class="actual-posts-1">
+Words
+    </div>
+
+
+    <a href="posts/post-1.html"><div class="actual-posts-1">
+      <p class="post-title">The Hare And The Tortoise (Reimagined)</p>
+    </div>
+    </a>
+</div>
+  <div id="Journals" class="tabcontent">
+    <h1 class="posts-heading">Journals</h1>
+    <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <h1 class="posts-heading">Contact</h1>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+
+
+  <script>
+  function openPage(evt, pageName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+  </body>
+</html>
