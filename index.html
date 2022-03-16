@@ -119,7 +119,7 @@
     Fishappointment
     </div>
     <div class="tab">
-  <button class="tablinks" onclick="openPage(event, 'Posts')">Posts</button>
+  <button class="tablinks" onclick="openPage(event, 'Posts')" id="defaultOpen">Posts</button>
   <button class="tablinks" onclick="openPage(event, 'Journals')">Journals</button>
   <button class="tablinks" onclick="openPage(event, 'Contact')">Contact</button>
   </div>
@@ -138,10 +138,13 @@
       <p class="post-title">The Hare And The Tortoise (Reimagined)</p>
     </div>
     </a>
-</div>
-  <div id="Journals" class="tabcontent">
+    </div>
+    <div id="Journals" class="tabcontent">
     <h1 class="posts-heading">Journals</h1>
-    <p>pain.</p>
+    <a href="Journals/journal-1.html"><div class="actual-posts-1">
+      <p class="post-title">Journal 1: Will be posted soon</p>
+    </div>
+    </a>
   </div>
 
   <div id="Contact" class="tabcontent">
@@ -165,6 +168,7 @@
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
   }
+    document.getElementById("defaultOpen").click();
   </script>
   </body>
 </html>
